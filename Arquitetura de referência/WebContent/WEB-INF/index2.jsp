@@ -1,21 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Arquitetura de referência</title>
+<title>Agrohelp</title>
 </head>
 <body>
-	<img src="../img/imagem.jpg">
-	<h1>Arquitetura de referência</h1>
+
+	<h1>PÁGINA PRINCIPAL</h1>
 	<hr>
 
 	<a href="logout">Logout</a>
+	<br>
 	<a href="exibeFormCadastroUsuario">Cadastrar novo usuário</a>
-	<a href="inserirNovoCliente">Cadastrar novo cliente</a>
-
+	<br>
+	<form action="inserirNovoCliente" method="post">
+		Nome cliente:<input name="cliente"> 
+		cpf cliente: <input	name="cpfCliente"> 
+		fazenda: <input name="fazenda"> <input
+			type="submit" value="ok">
+	</form>
+	<br>
 </body>
 </html>
 

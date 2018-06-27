@@ -13,12 +13,16 @@ public class FabricaDeTarefa {
 		tarefas.put("GET/logout", new LogoutTarefa());
 		tarefas.put("GET/exibeFormCadastroUsuario", new exibeFormCadastroUsuarioTarefa());
 		tarefas.put("POST/cadastrarUsuario", new cadastrarUsuarioTarefa());
-		tarefas.put("POST/inserirDadosPlantio",new inserirDadosPlantio());
-		tarefas.put("POST/gerenciarVisualizarContratoServico",new gerenciarVisualizarContratoServico ());
-		//tarefas.put("POST/inserirNovoCliente",new inserirNovoCliente ());
-		//tarefas.put("GET/consultarCliente",new consultarCliente ());
-		//tarefas.put("GET/gerarRelatorio",new gerarRelatorio ())
-		
+		// tarefas.put("GET/listarTodos", new listarTodosTarefa());
+		// tarefas.put("POST/inserirDadosPlantio",new inserirDadosPlantio());
+		// tarefas.put("POST/gerenciarVisualizarContratoServico",new
+		// gerenciarVisualizarContratoServico ());
+		InserirNovoCliente inc = new InserirNovoCliente();
+		tarefas.put("POST/inserirNovoCliente", inc);
+		tarefas.put("GET/inserirNovoCliente", inc);
+		// tarefas.put("GET/consultarCliente",new consultarCliente ());
+		// tarefas.put("GET/gerarRelatorio",new gerarRelatorio ())
+
 	}
 
 	public static Tarefa getTarefa(HttpServletRequest request) {

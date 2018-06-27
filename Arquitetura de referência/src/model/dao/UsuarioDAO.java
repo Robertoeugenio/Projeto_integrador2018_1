@@ -16,7 +16,10 @@ public class UsuarioDAO implements DAO {
 		Usuario usuario = null;
 		try {
 			stmt = con.createStatement();
-			String sql = "SELECT nome FROM usuarios where usuario='" + nomeUsuario + "' and senha='" + senha + "'";
+			String sql = "SELECT nome FROM usuarios where usuario='"
+			+ nomeUsuario  + "' and senha='" 
+			+ senha        + "'";
+			System.out.println(sql);
 			ResultSet rs = stmt.executeQuery(sql);
 			if (rs.next()) {
 				nomeUsuario = rs.getString("nome");

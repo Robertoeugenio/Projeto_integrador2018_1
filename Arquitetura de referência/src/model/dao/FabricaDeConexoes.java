@@ -12,7 +12,7 @@ public class FabricaDeConexoes {
 			e1.printStackTrace();
 		}
 		try {
-			return DriverManager.getConnection("jdbc:mysql://localhost/sistema", "root", "");
+			return DriverManager.getConnection("jdbc:mysql://localhost/agrohelp", "root", "");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
